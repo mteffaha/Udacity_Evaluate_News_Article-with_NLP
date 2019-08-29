@@ -23,7 +23,7 @@ From the route directory in the terminal, run the `npm run build-prod`
 command this will generate the dist folder and cache folders too in a folder `./dist`.
 - from the same directory, run `npm run start`
 - The site will be accessible from `localhost:3000` from your browser tab.
-- From the site you will be able to input your texts or url to be analyzed by aylien.
+- From the site you will be able to input your url to be analyzed by aylien.
 
 ### In Development Mode
 Then run the `npm run build-dev` command still from your terminal, this will lauch your default browser with 
