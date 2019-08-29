@@ -31,7 +31,7 @@ the html file from the views folder.
 - The site will be accessible from `localhost:8081` from your browser tab.
 - from the same directory, run `npm run start`
   
-- From the site you will be able to input your texts or url to be analyzed by aylien.
+- From the site you will be able to input your url to be analyzed by aylien.
 
 ## Testing
 
@@ -39,7 +39,7 @@ In this project the framework that was  used to test is `jest`.
 To run test, move to the root directory from your terminal run the command `npm run test`.
 
 Below is a screenshot of the test results
-![tests](npm_test_result.png)
+![tests](npm_tests.png)
 
 All the files in the `./src/js` file was tested. Below is a screenshot of the results after running the test command.
 
