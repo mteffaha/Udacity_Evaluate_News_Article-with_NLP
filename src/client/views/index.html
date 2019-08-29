@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+<body>
+
+<header >
+    Udacity Project on Natural Language Processing.
+</header>
+
+<main>
+    <h1>Natural Language Processing</h1>
+
+    <p>
+        Natural language processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret and manipulate human language. NLP draws from many disciplines, including computer science and computational linguistics, in its pursuit to fill the gap between human communication and computer understanding.
+    </p>
+
+    <p>
+        The Aylien Text Analysis API provides powerful and flexible AI-driven content analysis solutions that bring the power of NLP to the masses. We help developers, data scientists, and marketers understand human-generated textual content at scale.
+    </p>
+    <h2>Try putting in the url of an article - like from your favorite news source.</h2>
+    <p>Watch out though, each of these requests take up 3 of your alloted 1000 API hits today</p>
+
+    <form>
+        <input
+                type="url"
+                name="test_url"
+                value=""
+                placeholder="https://www.news-source/a-news-article..."
+        />
+        <input
+                type="submit"
+                name=""
+                value="submit"
+                onclick="return Client.handleSubmitArticle(event)"
+                onsubmit="return Client.handleSubmitArticle(event)"
+        />
+    </form>
+
+
+    <section class="url_check">
+        <span class="url_check_tag" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div id="wrong"></div>
+    </section>
+
+    <section class="url-results">
+        <ul>
+            <li>
+                <h3>Text Polarity:</h3>
+                <p id="polarity"></p>
+                <h4>Confidence: </h4>
+                <p id="polarity_confidence"></p>
+            </li>
+
+            <li>
+                <h3>Text Subjectivity:</h3>
+                <p id="subjectivity"></p>
+                <h4>Confidence: </h4>
+                <p id="subjectivity_confidence"></p>
+            </li>
+
+            <h3>Text Excerpt:</h3>
+            <p id="excerpt"></p>
+        </ul>
+    </section>
+
+    </main>
+
+    <footer>
+        <p>Udacity Project on Natural Language Processing</p>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+       }else{
+            console.log("error: service worker not working");
+        }
+    </script>
+
+</body>
+</html>
